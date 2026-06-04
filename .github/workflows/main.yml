@@ -1,0 +1,21 @@
+name: CI for soo branch
+
+on:
+  push:
+    branches: [ "soo" ] # ⭐️ soo 브랜치에 코드가 올라올 때만 작동합니다.
+  pull_request:
+    branches: [ "soo" ]
+
+# 조직(Organization)의 차단을 풀고 soo 브랜치에 쓰기 권한을 강제로 부여하는 코드
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Success Message
+        run: echo "soo branch permissions granted successfully!"
