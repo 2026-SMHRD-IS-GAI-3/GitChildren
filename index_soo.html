@@ -1,11 +1,2 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>branch 실습...!</h1>
-</body>
-</html>
+mkdir frames
+ffmpeg -ss 00:00:01 -to 00:00:04 -i input.mp4 -vf fps=6 frames/frame_%04d.png
